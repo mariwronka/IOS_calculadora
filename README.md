@@ -7,3 +7,6 @@ Baseada na calculadora padrão do iOS, essa aplicação executa as seguintes fun
 ## Como construi a Calculadora
 * Criei uma classe com o nome de `calculator` que gerencia todo o controle das operações existentes;
 * A aplicação possui uma classe chamada `extensions`, essa classe faz o controle de como resultado das operações são apresentados ao usuário;
+
+##
+![calculator](https://user-images.githubusercontent.com/12899445/58518983-f4415080-8187-11e9-873d-5f3c85c634f1.png)
