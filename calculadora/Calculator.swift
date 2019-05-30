@@ -20,7 +20,7 @@ class Calculator {
     
     var operation: Operation?
     
-    func setNumbers (numberTouch: String) -> String {
+    func setNumbers(numberTouch: String) -> String {
         if numbersString.contains("."),
             numberTouch == "." { return numbersString }
        
@@ -28,23 +28,30 @@ class Calculator {
         return numbersString.setUpStringNumber()
     }
     
-    func cleanNumbers () {
+    func cleanNumbers() -> String {
         numbersString = ""
         primeryNumber = 0
         secondaryNumber = 0
         total = 0
+        return "0"
     }
     
-    func setOperation(idOperation: Int) {
-        switch idOperation {
-            case 14: operation = Operation.divide
-            case 15: operation = Operation.multiply
-            case 16: operation = Operation.minus
-            case 17: operation = Operation.plus
-            default: return
-        }
-     
+    func setOperationSimple(idOperation: Operation) -> String {
         setPrimaryNumber()
+
+        if idOperation == .divide {
+            operation = Operation.divide
+            return "/"
+        } else if idOperation == Operation.multiply {
+            operation = .multiply
+            return "*"
+        } else if idOperation == Operation.minus {
+            operation = .minus
+            return "-"
+        } else {
+            operation = .plus
+            return "+"
+        }
     }
 
     func showOperationTotal() -> String  {
@@ -53,72 +60,61 @@ class Calculator {
         return value.toDisplay
     }
     
-    func setOperationTotal() {
+    func setOperationTotal() -> String {
         setSecondaryNumber()
         
-        switch operation {
-            case .divide?:
-                if secondaryNumber == 0 { total = primeryNumber }
-                else { total = primeryNumber / secondaryNumber }
-            case .multiply?: total = primeryNumber * secondaryNumber
-            case .minus?: total = primeryNumber - secondaryNumber
-            case .plus?: total = primeryNumber + secondaryNumber
-            default: return
+        if operation == .divide {
+            total = primeryNumber / secondaryNumber
+        } else if operation == .multiply {
+            total = primeryNumber * secondaryNumber
+        } else if operation == .minus {
+            total = primeryNumber - secondaryNumber
+        } else if operation == .plus {
+            total = primeryNumber + secondaryNumber
         }
         
         numbersString = ""
         secondaryNumber = 0
         primeryNumber = total
+        
+        return showOperationTotal()
     }
     
+    func setSquare() -> String {
+        setPrimaryNumber()
+        primeryNumber = primeryNumber.squareRoot()
+        total = primeryNumber
+        return showOperationTotal()
+    }
     
-    func showOperation() -> String {
-        switch operation {
-        case .divide?:
-            return "/"
-        case .multiply?:
-            return "x"
-        case .minus?:
-            return "-"
-        case .plus?:
-            return "+"
-        default:
-            return "🤔"
-        }
+    func setPow() -> String  {
+        setPrimaryNumber()
+        primeryNumber = pow(primeryNumber,2)
+        total = primeryNumber
+        return showOperationTotal()
     }
     
     func setPrimaryNumber() {
-        if primeryNumber != 0 { return }
-        if numbersString == "" { return }
+        if primeryNumber != 0, numbersString == "" { return }
         primeryNumber = Double(numbersString) ?? 0
         numbersString = ""
     }
     
     func setSecondaryNumber() {
-        if secondaryNumber != 0 { return }
-        if numbersString == "" { return }
+        if secondaryNumber != 0, numbersString == "" { return }
         secondaryNumber = Double(numbersString) ?? 0
         numbersString = ""
     }
     
-    func setSquare() {
-        setPrimaryNumber()
-        primeryNumber = primeryNumber.squareRoot()
-        total = primeryNumber
-    }
-    
-    func setPow() {
-        setPrimaryNumber()
-        primeryNumber = pow(primeryNumber,2)
-        total = primeryNumber
-    }
 }
 
-enum Operation {
-    case root
-    case square
-    case divide
-    case multiply
-    case minus
-    case plus
+enum Operation: Int {
+    case clean = 11
+    case root = 12
+    case square = 13
+    case divide = 14
+    case multiply = 15
+    case minus = 16
+    case plus = 17
+    case total = 18
 }

@@ -22,7 +22,7 @@ extension String {
     mutating func setUpStringNumber() -> String {
         if self == "." { self = "0." }
         if self == ".." { self = "0." }
-        if self == "00." { self = "0." }
-        return self.replacingOccurrences(of: ".", with: ",")
+        if self == "00" { self = "0" }
+        return self.toDisplay
     }
 }

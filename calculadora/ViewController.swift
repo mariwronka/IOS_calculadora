@@ -16,34 +16,20 @@ class ViewController: UIViewController {
     
     @IBAction func touchNumbers(_ sender: UIButton) {
         var number = ""
-        if numbersLabel.text == "0", sender.tag == 0 { return }
-
-        if numbersLabel.text == "0", sender.tag == 10 { number = "0." }
-        else if sender.tag == 10 { number = "." }
+        if sender.tag == 10 { number = "." }
         else { number = String(sender.tag) }
-        
         numbersLabel.text = calculator.setNumbers(numberTouch: number).toDisplay
     }
     
     @IBAction func touchOperators(_ sender: UIButton) {
-        switch sender.tag {
-        case 11:
-            numbersLabel.text = "0"
-            calculator.cleanNumbers()
-        case 12:
-            calculator.setSquare()
-            numbersLabel.text = calculator.showOperationTotal()
-        case 13:
-            calculator.setPow()
-            numbersLabel.text = calculator.showOperationTotal()
-        case 18:
-            calculator.setOperationTotal()
-            numbersLabel.text = calculator.showOperationTotal()
-        default:
-            calculator.setOperation(idOperation: sender.tag)
-            numbersLabel.text = calculator.showOperation()
+        let operation = Operation(rawValue: sender.tag)!
+        switch operation {
+            case .clean: numbersLabel.text = calculator.cleanNumbers()
+            case .root: numbersLabel.text = calculator.setSquare()
+            case .square: numbersLabel.text = calculator.setPow()
+            case .total: numbersLabel.text = calculator.setOperationTotal()
+            default: numbersLabel.text = calculator.setOperationSimple(idOperation: operation)
         }
-        
     }
 }
 
