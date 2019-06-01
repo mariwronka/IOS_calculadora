@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     
     lazy var calculator = Calculator()
     
+    @IBOutlet var arrayButtons: [UIButton]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        for btn in arrayButtons { btn.layer.cornerRadius = 30 }
+    }
+    
     @IBAction func touchNumbers(_ sender: UIButton) {
         var number = ""
         if sender.tag == 10 { number = "." }
