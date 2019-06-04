@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for btn in arrayButtons { btn.layer.cornerRadius = 30 }
+        for btn in arrayButtons { btn.layer.cornerRadius = 50 }
     }
     
     @IBAction func touchNumbers(_ sender: UIButton) {
