@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,24 +15,33 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mPF-LR-8Qa">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mPF-LR-8Qa">
+                                <rect key="frame" x="0.0" y="171" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mPF-LR-8Qa" secondAttribute="height" multiplier="1:1" id="CUL-E0-DeW"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mPF-LR-8Qa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0qu-Y2-ky9"/>
+                            <constraint firstItem="mPF-LR-8Qa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1rZ-bz-Ial"/>
+                            <constraint firstItem="mPF-LR-8Qa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Aj9-W3-3dN"/>
+                            <constraint firstAttribute="trailing" secondItem="mPF-LR-8Qa" secondAttribute="trailing" id="kfO-S8-Vnr"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="0.0" trailing="20"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.734375" y="374.67057101024886"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="330" height="330"/>
+        <image name="logo" width="960" height="960"/>
     </resources>
 </document>

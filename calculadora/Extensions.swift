@@ -16,6 +16,7 @@ extension Double {
 
 extension String {
     var toDisplay: String {
+        if ( self == "inf") { return "∞" } 
         return self.replacingOccurrences(of: ".", with: ",")
     }
     
