@@ -9,4 +9,5 @@ Baseada na calculadora padrão do iOS, essa aplicação executa as seguintes fun
 * A aplicação possui uma classe chamada `extensions`, essa classe faz o controle de como resultado das operações são apresentados ao usuário;
 
 ##
-![calculator](https://user-images.githubusercontent.com/12899445/58519394-c4934800-8189-11e9-89f8-f8e5c4a3b0b2.png)
+![calculator](https://user-images.githubusercontent.com/12899445/58927802-6e447d00-8726-11e9-871e-cf873e1ab840.png)
+
