@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculadora" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-QS-DoM">
-                                <rect key="frame" x="30" y="279" width="354" height="563"/>
+                                <rect key="frame" x="30" y="153" width="354" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRh-Bk-ala" userLabel="Display">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="110.66666666666667"/>
@@ -35,7 +35,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-rH-kZe" userLabel="Stack Line 1">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="82.333333333333329"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-t0-sUt">
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-t0-sUt" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.76854288578033447" green="0.76867610216140747" blue="0.76853454113006592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -45,11 +45,16 @@
                                                         <state key="normal" title="AC">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOU-z8-T9W"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-vK-m3M">
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-vK-m3M" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="90.666666666666686" y="0.0" width="82.333333333333314" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.76854288579999996" green="0.76867610220000004" blue="0.76853454109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
@@ -57,23 +62,33 @@
                                                         <state key="normal" title="√">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3U-Nn-OUY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBN-J7-xao">
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBN-J7-xao" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="181" y="0.0" width="82.666666666666686" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.76854288579999996" green="0.76867610220000004" blue="0.76853454109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="5"/>
+                                                        <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="5"/>
                                                         <state key="normal" title="x²">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhA-KR-fJ0"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-Tj-aD3">
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-Tj-aD3" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="271.66666666666669" y="0.0" width="82.333333333333314" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.84825111043248724" green="0.16026853975939515" blue="0.44927868276563832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -81,6 +96,11 @@
                                                         <state key="normal" title="÷">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6X-aD-jGs"/>
                                                         </connections>
@@ -90,7 +110,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-Yj-MWO" userLabel="Stack Line 2">
                                                 <rect key="frame" x="0.0" y="90.333333333333314" width="354" height="82.666666666666686"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-Qd-c2u">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-Qd-c2u" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -98,11 +118,16 @@
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifh-6h-SSH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBM-q1-v5B">
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBM-q1-v5B" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="90.666666666666686" y="0.0" width="82.333333333333314" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -110,11 +135,16 @@
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ClT-zx-vy7"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-yo-Lyb">
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-yo-Lyb" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="181" y="0.0" width="82.666666666666686" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -122,11 +152,16 @@
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oo6-oh-2Cz"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwM-fI-03D">
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwM-fI-03D" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="271.66666666666669" y="0.0" width="82.333333333333314" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.84825111040000001" green="0.1602685398" blue="0.4492786828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -134,6 +169,11 @@
                                                         <state key="normal" title="x">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FE5-7P-9OQ"/>
                                                         </connections>
@@ -141,9 +181,9 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5bw-FT-rnO" userLabel="Stack Line 3">
-                                                <rect key="frame" x="0.0" y="180.99999999999994" width="354" height="82.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="181" width="354" height="82.333333333333314"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-7d-8x6">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-7d-8x6" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -151,11 +191,16 @@
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oid-JH-Xil"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie0-fn-Efe">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie0-fn-Efe" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="90.666666666666686" y="0.0" width="82.333333333333314" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -163,11 +208,16 @@
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yf-cz-WQd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy6-pv-SgS">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy6-pv-SgS" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="181" y="0.0" width="82.666666666666686" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -175,11 +225,16 @@
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTa-Wt-nBU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-ur-dCj">
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-ur-dCj" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="271.66666666666669" y="0.0" width="82.333333333333314" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.84825111040000001" green="0.1602685398" blue="0.4492786828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -187,6 +242,11 @@
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="am0-rm-w36"/>
                                                         </connections>
@@ -196,7 +256,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hXn-Xh-Sfi" userLabel="Stack Line 4">
                                                 <rect key="frame" x="0.0" y="271.33333333333331" width="354" height="82.666666666666686"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32X-1e-RnX">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32X-1e-RnX" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -204,11 +264,16 @@
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="76e-Gr-QLA"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-Mw-RfN">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-Mw-RfN" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="90.666666666666686" y="0.0" width="82.333333333333314" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -216,11 +281,16 @@
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjE-6O-5LC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSE-Mz-4bM">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSE-Mz-4bM" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="181" y="0.0" width="82.666666666666686" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -228,11 +298,16 @@
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHg-dZ-4Nb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-er-9Vx">
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-er-9Vx" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="271.66666666666669" y="0.0" width="82.333333333333314" height="82.666666666666671"/>
                                                         <color key="backgroundColor" red="0.84825111040000001" green="0.1602685398" blue="0.4492786828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -240,6 +315,11 @@
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Zs-O8-Znb"/>
                                                         </connections>
@@ -249,13 +329,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mhy-BK-RVf" userLabel="Stack Line 5">
                                                 <rect key="frame" x="0.0" y="361.99999999999994" width="354" height="82.333333333333314"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-CC-3pr">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-CC-3pr" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="173" height="82.333333333333329"/>
                                                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6p-4e-XFV"/>
                                                         </connections>
@@ -263,7 +348,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-sf-2EV">
                                                         <rect key="frame" x="181" y="0.0" width="173" height="82.333333333333329"/>
                                                         <subviews>
-                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poh-Ay-oz1">
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poh-Ay-oz1" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="82.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -271,11 +356,16 @@
                                                                 <state key="normal" title=",">
                                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="touchNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpR-3O-5Jv"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yif-36-2yc">
+                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yif-36-2yc" customClass="DesignableView" customModule="calculadora" customModuleProvider="target">
                                                                 <rect key="frame" x="90.666666666666686" y="0.0" width="82.333333333333314" height="82.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84825111040000001" green="0.1602685398" blue="0.4492786828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -283,6 +373,11 @@
                                                                 <state key="normal" title="=">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="touchOperators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtY-pC-FAN"/>
                                                                 </connections>
@@ -307,25 +402,6 @@
                     </view>
                     <connections>
                         <outlet property="numbersLabel" destination="oRh-Bk-ala" id="3Ay-Nl-f4T"/>
-                        <outletCollection property="arrayButtons" destination="KDn-Mw-RfN" collectionClass="NSMutableArray" id="HoI-mu-CPP"/>
-                        <outletCollection property="arrayButtons" destination="eBN-J7-xao" collectionClass="NSMutableArray" id="RXw-wa-J1R"/>
-                        <outletCollection property="arrayButtons" destination="VBM-q1-v5B" collectionClass="NSMutableArray" id="8qH-r0-hMB"/>
-                        <outletCollection property="arrayButtons" destination="ie0-fn-Efe" collectionClass="NSMutableArray" id="ZMa-x5-6LC"/>
-                        <outletCollection property="arrayButtons" destination="poh-Ay-oz1" collectionClass="NSMutableArray" id="R6y-wv-0Qz"/>
-                        <outletCollection property="arrayButtons" destination="q2r-vK-m3M" collectionClass="NSMutableArray" id="GA5-SY-WGK"/>
-                        <outletCollection property="arrayButtons" destination="JlX-t0-sUt" collectionClass="NSMutableArray" id="VvP-Kb-OXZ"/>
-                        <outletCollection property="arrayButtons" destination="bSS-yo-Lyb" collectionClass="NSMutableArray" id="emD-CC-jdf"/>
-                        <outletCollection property="arrayButtons" destination="32X-1e-RnX" collectionClass="NSMutableArray" id="vgg-bt-iig"/>
-                        <outletCollection property="arrayButtons" destination="BOc-CC-3pr" collectionClass="NSMutableArray" id="1l2-3G-jbj"/>
-                        <outletCollection property="arrayButtons" destination="fFT-ur-dCj" collectionClass="NSMutableArray" id="QiH-Dh-Pe7"/>
-                        <outletCollection property="arrayButtons" destination="kRv-er-9Vx" collectionClass="NSMutableArray" id="VuP-fp-A1T"/>
-                        <outletCollection property="arrayButtons" destination="9hi-Tj-aD3" collectionClass="NSMutableArray" id="9xb-O6-9OJ"/>
-                        <outletCollection property="arrayButtons" destination="WSE-Mz-4bM" collectionClass="NSMutableArray" id="Cxo-zY-lV9"/>
-                        <outletCollection property="arrayButtons" destination="vy6-pv-SgS" collectionClass="NSMutableArray" id="rgX-bS-gRL"/>
-                        <outletCollection property="arrayButtons" destination="yif-36-2yc" collectionClass="NSMutableArray" id="imw-gP-f0T"/>
-                        <outletCollection property="arrayButtons" destination="kTW-Qd-c2u" collectionClass="NSMutableArray" id="oVy-kb-FvT"/>
-                        <outletCollection property="arrayButtons" destination="FwM-fI-03D" collectionClass="NSMutableArray" id="bA3-2Y-DeE"/>
-                        <outletCollection property="arrayButtons" destination="Itx-7d-8x6" collectionClass="NSMutableArray" id="2e2-t2-vPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
